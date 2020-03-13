@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumWebSample01CS", "SeleniumWebSample01CS\SeleniumWebSample01CS.csproj", "{F3053682-9F02-40C7-8EA4-560E424105C0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9EEAB21-6632-4B91-93BC-EFFF50920705}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{59B28638-4B52-4B78-9179-4577BADFE194}"
+	ProjectSection(SolutionItems) = preProject
+		libs.txt = libs.txt
+		libs\MicrosoftWebDriver.exe = libs\MicrosoftWebDriver.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +26,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59B28638-4B52-4B78-9179-4577BADFE194} = {C9EEAB21-6632-4B91-93BC-EFFF50920705}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {53782DA1-A029-4A91-BF96-FE0E3D03949B}
