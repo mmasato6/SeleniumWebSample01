@@ -10,6 +10,12 @@ Module Module1
             'googleに遷移
             webdriver.Url = "https://www.google.co.jp"
 
+            'CSSセレクタを使って要素を取得
+            Dim element = webdriver.FindElement(By.Name("q"))
+            '取得した要素にテキストを入力してsubmit
+            element.SendKeys("selenium")
+            element.Submit()
+
             '結果を見たいので3秒待つ
             Thread.Sleep(TimeSpan.FromSeconds(3))
             'ブラウザ終了
