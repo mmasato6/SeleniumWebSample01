@@ -23,7 +23,7 @@ namespace SeleniumWebSample01CS
                 Console.WriteLine("googleを表示したよ");
 
                 // CSSセレクタを使って要素を取得
-                IWebElement element = webDriver.FindElement(By.CssSelector("#lst-ib"));
+                IWebElement element = webDriver.FindElement(By.CssSelector("input[name=\"q\"]"));
                 // 取得した要素にテキストを入力してsubmit
                 element.SendKeys("selenium");
                 element.Submit();
