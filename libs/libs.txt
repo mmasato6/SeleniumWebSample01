@@ -2,4 +2,4 @@ Copy files which not available from NuGet here and refer them.
 NuGetで取得できないファイルはここに置いて、それを参照してください。
 - MicrosofWebDriver.exe
 	Windowsの「設定」⇒「アプリ」⇒「アプリと機能」⇒「オプション機能」からMicrosoft WebDriver を選択してインストール
-	C:\Windows\System32\MicrosoftWebDriver.exe から実行パスにコピー(ビルド後イベント)
+	C:\Windows\System32\MicrosoftWebDriver.exe にパスを通しておく。(通常、通っているはず)
