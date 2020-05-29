@@ -40,6 +40,18 @@ namespace SeleniumMSTest01CS
                 Console.WriteLine(webDriver.Title);
                 */
 
+                var screenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
+                // TODO:ヘルパーに切り出したほうがよさそう
+                const string ScreenshotDirectoryRoot = "SeleniumSample";
+                string screenShotDirectoryPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), ScreenshotDirectoryRoot,DateTime.Now.ToString("yyyyMMddHHmm"));
+                if (!System.IO.Directory.Exists(screenShotDirectoryPath))
+                {
+                    System.IO.Directory.CreateDirectory(screenShotDirectoryPath);
+                }
+                string screenShotName = $"{this.GetType().Name}.{nameof(TestMethod1)}.01.png";
+                string screenShotFullName = System.IO.Path.Combine(screenShotDirectoryPath,screenShotName);
+                screenShot.SaveAsFile(screenShotFullName,ScreenshotImageFormat.Png);
+
                 // 最初のリンクの文字列に検索語句が含まれていることを確認する
                 var firstElement = webDriver.FindElement(By.ClassName("LC20lb")); //2020/05/29時点。
                 string actualText = firstElement.Text;
